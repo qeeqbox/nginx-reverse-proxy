@@ -1,0 +1,11 @@
+version: '3'
+ 
+services:
+    reverseproxy:
+        build: ./reverseproxy
+        ports:
+            - 8080:8080
+        depends_on:
+            - honeypots
+    honeypots:
+        build: ./honeypots
