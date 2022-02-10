@@ -7,5 +7,8 @@ services:
             - 8080:8080
         depends_on:
             - honeypots
+
     honeypots:
         build: ./honeypots
+        environment:
+            - HONEYPOTS_OPTIONS=fix_get_client_ip
